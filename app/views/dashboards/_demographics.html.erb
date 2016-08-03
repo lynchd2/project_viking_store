@@ -3,12 +3,10 @@
     <th>Item</th>
     <th>Data</th>
   </tr>
-  <%= @results.each do |key, value| %>
+  <% top_statistic.each do |key, value| %>
   <tr>
-    <td><%= value %></td>
     <td><%= key %></td>
+    <td><%= value %></td>
   </tr>
   <% end %>
-  
-
 </table>

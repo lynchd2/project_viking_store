@@ -36,34 +36,16 @@
 
 <h2>2. User Demographics and Behaviour</h2>
 <h4>Top 3 States Users Live In (billing)</h4>
-<%= render 'demographics', locals {
-  
-} %>
+<%= render partial: 'demographics', 
+    locals: {
+             top_statistic: @top_states
+            } %>
 
 <h4>Top 3 Cities Users Live In (billing)</h4>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>New Users</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Orders</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>New Products</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Revenue</td>
-    <td>10</td>
-  </tr>
-
-</table>
+<%= render partial: 'demographics', 
+    locals: {
+             top_statistic: @top_cities
+            } %>
 
 <h4>Total</h4>
 <table>
