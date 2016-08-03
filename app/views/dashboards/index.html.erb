@@ -5,29 +5,11 @@
 <div class="col-xs-6">
 <h2>1. Overall Platform</h2>
 <h4>Last 7 Days</h4>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>New Users</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Orders</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>New Products</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Revenue</td>
-    <td>10</td>
-  </tr>
-
-</table>
+  <%= render 'quantity_summary', 
+              user_count: @user_count,
+              order_count: @order_count,
+              new_products: @new_products,
+              revenue: @revenue %>
 
 <h4>Last 30 Days</h4>
 <table>
