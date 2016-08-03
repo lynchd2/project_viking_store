@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Data</th>
+  </tr>
+  <%= @results.each do |key, value| %>
+  <tr>
+    <td><%= value %></td>
+    <td><%= key %></td>
+  </tr>
+  <% end %>
+  
+
+</table>

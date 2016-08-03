@@ -5,89 +5,40 @@
 <div class="col-xs-6">
 <h2>1. Overall Platform</h2>
 <h4>Last 7 Days</h4>
-  <%= render 'quantity_summary', 
+  <%= render partial: 'quantity_summary', 
+  locals: {
+              user_count: @user_count7,
+              order_count: @order_count7,
+              new_products: @new_products7,
+              revenue: @revenue7 
+            } %>
+
+<h4>Last 30 Days</h4>
+<%= render partial: 'quantity_summary', 
+  locals: {
+              user_count: @user_count30,
+              order_count: @order_count30,
+              new_products: @new_products30,
+              revenue: @revenue30 
+            } %>
+
+<h4>Total</h4>
+<%= render partial: 'quantity_summary', 
+  locals: {
               user_count: @user_count,
               order_count: @order_count,
               new_products: @new_products,
-              revenue: @revenue %>
-
-<h4>Last 30 Days</h4>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>New Users</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Orders</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>New Products</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Revenue</td>
-    <td>10</td>
-  </tr>
-
-</table>
-
-<h4>Total</h4>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>New Users</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Orders</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>New Products</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Revenue</td>
-    <td>10</td>
-  </tr>
-
-</table>
+              revenue: @revenue 
+            } %>
 
 </div>
 <div class="col-xs-6">
-<h2>2. User Demographics and Behaviour</h2>
-<h4>Top 3 States Users Liv In (billing)</h4>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>New Users</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Orders</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>New Products</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Revenue</td>
-    <td>10</td>
-  </tr>
 
-</table>
+<h2>2. User Demographics and Behaviour</h2>
+<h4>Top 3 States Users Live In (billing)</h4>
+<%= render 'demographics', locals {
+  
+} %>
 
 <h4>Top 3 Cities Users Live In (billing)</h4>
 <table>
