@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <th>Item</th>
+    <th>User</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>Highest Single Order Value</td>
+    <td><%= highest_order[0].first_name + ' ' + highest_order[0].last_name  %></td>
+    <td><%= number_to_currency(highest_order[0].total) %></td>
+  </tr>
+  <tr>
+    <td>Highest Lifetime Value</td>
+    <td><%= highest_lifetime[0].first_name + ' ' + highest_lifetime[0].last_name %></td>
+    <td><%= number_to_currency(highest_lifetime[0].total) %></td>
+  </tr>
+  <tr>
+    <td>Highest Average Order Value</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Most Orders Placed</td>
+    <td>10</td>
+  </tr>
+
+</table>

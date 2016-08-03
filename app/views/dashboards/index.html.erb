@@ -48,29 +48,12 @@
             } %>
 
 <h4>Total</h4>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>New Users</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Orders</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>New Products</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Revenue</td>
-    <td>10</td>
-  </tr>
+<%= render partial: 'top_user',
+    locals: {
+            highest_order: @highest_order,
+            highest_lifetime: @highest_lifetime
 
-</table>
+    } %>
 
 </div>
 </div>
