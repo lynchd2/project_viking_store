@@ -51,7 +51,9 @@
 <%= render partial: 'top_user',
     locals: {
             highest_order: @highest_order,
-            highest_lifetime: @highest_lifetime
+            highest_lifetime: @highest_lifetime,
+            highest_average_order: @highest_average_order,
+            highest_order_person: @highest_order_person
 
     } %>
 
@@ -62,29 +64,12 @@
 <div class="col-xs-6">
 <h2>3. Order Statistics</h2>
 <h4>Last 7 Days</h4>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>New Users</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Orders</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>New Products</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Revenue</td>
-    <td>10</td>
-  </tr>
-
-</table>
+  <%= render partial: 'order_statistics', 
+  locals: {
+              order_count: @order_count7,
+              revenue: @revenue7,
+              largest_order_7: @largest_order_7
+            } %>
 
 <h4>Last 30 Days</h4>
 <table>

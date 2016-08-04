@@ -19,8 +19,11 @@ class DashboardsController < ApplicationController
     @top_states = User.joins("JOIN addresses ON users.billing_id = addresses.id").joins("JOIN states ON states.id = addresses.state_id").group('states.name').order('sum(states.id) desc').limit(3).count('state_id')
     @top_cities = User.joins("JOIN addresses ON users.billing_id = addresses.id").joins("JOIN cities ON cities.id = addresses.city_id").group('cities.name').order('sum(cities.id) desc').limit(3).count('city_id')
 
-    @highest_order = User.highest_order_value
+    @highest_order = User.highest_order_value_1
     @highest_lifetime = User.highest_lifetime_value
+    @highest_average_order = User.highest_average_order
+    @highest_order_person = User.highest_order_person
+    @largest_order_7 = User.highest_order_value_7
   end
 end
 

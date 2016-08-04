@@ -16,11 +16,13 @@
   </tr>
   <tr>
     <td>Highest Average Order Value</td>
-    <td>10</td>
+        <td><%= highest_average_order[0].first_name + ' ' + highest_average_order[0].last_name %></td>
+    <td><%= number_to_currency(highest_average_order[0].total) %></td>
   </tr>
   <tr>
     <td>Most Orders Placed</td>
-    <td>10</td>
+        <td><%= highest_order_person[0].first_name + ' ' + highest_order_person[0].last_name %></td>
+    <td><%= highest_order_person[0].orders %></td>
   </tr>
 
 </table>
